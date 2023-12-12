@@ -1,5 +1,5 @@
 import Costs from "./components/Costs/Costs";
-import NewCost from "./components/NewCost/NewCost"; 
+import NewCost from "./components/NewCost/NewCost";
 
 
 function App() {
@@ -31,9 +31,9 @@ function App() {
 
   return (
     <div>
-      <NewCost onAddCost={addCostHandler}/>
-      <Costs cost={costs}/>
-      </div>
+      <NewCost onAddCost={addCostHandler} />
+      <Costs cost={costs} />
+    </div>
   );
 }
 
