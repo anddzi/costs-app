@@ -11,6 +11,7 @@ const NewCost = (props) => {
       id: Math.random().toString(),
     };
     props.onAddCost(costData);
+    setIsVisible(false);
   };
 
   const visibleHandler = (data) => {

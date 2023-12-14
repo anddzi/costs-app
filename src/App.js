@@ -18,7 +18,13 @@ const INTIAL_COSTS = [
   },
   {
     id: "c3",
-    date: new Date(2021, 1, 3),
+    date: new Date(2021, 3, 2),
+    description: "Gas",
+    amount: 34.3,
+  },
+  {
+    id: "c4",
+    date: new Date(2021, 3, 3),
     description: "Dinner",
     amount: 50.8,
   },
