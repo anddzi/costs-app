@@ -2,17 +2,17 @@ import Diagram from "../Diagram/Diagram";
 
 const CostsDiagram = (props) => {
   const diagramDataSets = [
-    { labek: "Jan", value: 0 },
-    { labek: "Feb", value: 0 },
-    { labek: "Mar", value: 0 },
-    { labek: "Apr", value: 0 },
-    { labek: "Mai", value: 0 },
-    { labek: "Jun", value: 0 },
-    { labek: "Jul", value: 0 },
-    { labek: "Aug", value: 0 },
-    { labek: "Sep", value: 0 },
-    { labek: "Nov", value: 0 },
-    { labek: "Dec", value: 0 },
+    { label: "Jan", value: 0 },
+    { label: "Feb", value: 0 },
+    { label: "Mar", value: 0 },
+    { label: "Apr", value: 0 },
+    { label: "Mai", value: 0 },
+    { label: "Jun", value: 0 },
+    { label: "Jul", value: 0 },
+    { label: "Aug", value: 0 },
+    { label: "Sep", value: 0 },
+    { label: "Nov", value: 0 },
+    { label: "Dec", value: 0 },
   ];
 
   for (const cost of props.costs) {
