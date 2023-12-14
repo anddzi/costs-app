@@ -1,40 +1,29 @@
-import Costitem from "./Costitem";
 import Card from "../UI/Card";
-import './Costs.css';
+import "./Costs.css";
 import CostsFilter from "./CostsFilter";
 import React, { useState } from "react";
+import CostList from "./CostList";
 
-function Costs(props) {
+const Costs = (props) => {
+  const [selectedYear, setSelectedYear] = useState("2021");
 
-    const [filteredYear, setFilteredYear] = useState('2021');
+  const filtredCosts = props.costs.filter((filtredYear) => {
+    return filtredYear.date.getFullYear().toString() === selectedYear;
+  });
 
-    const chnageYearHandler = (year) => {
-        setFilteredYear(year);
-    }
+  const yearChangeHandler = (year) => {
+    setSelectedYear(year);
+  };
 
-    return (
-        <div>
-            <Card className={'costs'}>
-                <CostsFilter year={filteredYear} onChangeYear={chnageYearHandler} />
-                <Costitem
-                    date={props.cost[0].date}
-                    description={props.cost[0].description}
-                    amount={props.cost[0].amount}
-                />
-                <Costitem
-                    date={props.cost[1].date}
-                    description={props.cost[1].description}
-                    amount={props.cost[1].amount}
-                />
-                <Costitem
-                    date={props.cost[2].date}
-                    description={props.cost[2].description}
-                    amount={props.cost[2].amount}
-                />
-            </Card>
-        </div>
-    )
 
-}
+  return (
+    <div>
+      <Card className={"costs"}>
+        <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler} />
+        <CostList costs={filtredCosts}/>
+      </Card>
+    </div>
+  );
+};
 
 export default Costs;
